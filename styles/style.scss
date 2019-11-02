@@ -1,0 +1,526 @@
+/*# sourceMappingURL=practice.css.map */
+//defining variables
+$color-light: #29d8db;
+$color-dark: #01578c;
+$hr-color: #01578c; // defining mixins
+@mixin button {
+  background-color: $color-light;
+  font-size: 18px;
+  color: white;
+  padding: 15px 24px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-dark;
+  }
+}
+@mixin icons {
+  color: $color-light;
+  font-size: 40px;
+  padding: 8px;
+}
+@mixin boxShadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+@mixin logo {
+  span.img {
+    font-size: 30px;
+    color: $color-dark;
+    padding-right: 5px;
+  }
+
+  span.text {
+    font-size: 20px;
+    color: $color-light;
+    font-weight: bolder;
+  }
+}
+//importing stylesheet
+@import "_reset.scss";
+
+ //basic styles
+
+section {
+  text-align: center;
+  margin: 50px;
+
+}
+
+
+p {
+  color: #7a7a7a;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  width: 25%;
+  margin: 20px auto;
+  border: 1px solid $hr-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+//style for navigation bar
+
+
+nav {
+
+  width: 100%;
+  display: grid;
+  grid-template-columns:1fr;
+
+  div.logo {
+    padding-left:20px;
+    padding-bottom:10px;
+    @include logo;
+    border-bottom:solid 2px $color-dark;
+  }
+  //end of div.logo
+  div.links {
+    ul {
+
+      display: grid;
+      grid-template-columns:1fr ;
+    }
+
+    ul li {
+
+      display: inline-block;
+      padding:10px;
+      border-bottom:solid 1px $color-light;
+    }
+
+    a {
+      color: black;
+      padding-left:30px;
+
+      &:hover {
+        color: $color-light;
+      }
+    }
+
+    a.phone {
+      span {
+        color: $color-dark;
+        padding-right: 5px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+//style for the main container of the page
+
+div.content {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:30px;
+}
+//style for the header
+
+header {
+
+  background-image: linear-gradient(to right, rgba(1, 87, 140, 0.7)70%, rgba(41, 216, 219, 0.7)30%) , url("../images/banner.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns:1fr;
+  color: white;
+
+ div.text {
+   padding:50px;
+   text-align:center;
+ }
+  hr {
+    border: solid 1px white;
+
+  }
+  h1 {
+    font-size:25px;
+  }
+
+  //end od div.text
+  div.form {
+    color: $color-dark;
+    background-color: white;
+    margin:50px;
+    padding: 50px;
+    border-radius: 20px;
+
+    form input,
+    textarea {
+      border-radius: 5px;
+      display: block;
+      padding: 15px;
+      margin: 15px 15px 15px 0;
+      width: 100%;
+      background-color: #fafafa;
+      outline: none;
+      border: 1px solid #D3D3D3;
+    }
+
+    form button {
+      margin: 12px;
+      @include button;
+    }
+  }
+  //end of div.form
+}
+//end of header
+//style for the main section
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+//styles for different section
+
+section#about {
+  margin: 100px 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:50px;
+
+  div.img {
+    position: relative;
+    height:500px;
+    width: 90%;
+    border-radius: 15px;
+    background-image: url("../images/banner_2.jpg");
+    background-size: cover;
+
+    &::before {
+      content: "";
+      display: block;
+      border-radius: 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(1, 87, 140, 0.7);
+    }
+
+    img.top {
+      border-radius: 25px;
+      width: 255px;
+      height: 350px;
+      position: absolute;
+      top: 35%;
+      left:45%;
+      border: solid 10px white;
+    }
+  }
+  //end of div.img
+  div.text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+
+    p.strong {
+      font-weight: bolder;
+      font-size: 18px;
+    }
+
+    a {
+      color: $color-dark;
+      border-bottom: 8px double $color-dark;
+      padding: 5px;
+    }
+  }
+  //end of div.text
+}
+//end of section#about
+
+section#consultation {
+
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:30px;
+  background-color: $color-dark;
+  color: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 50px 20px;
+
+  p {
+    color: white;
+  }
+
+  button {
+    @include button;
+    &:hover {
+      background-color: white;
+      color:$color-dark;
+    }
+  }
+}
+//end of section#consultation
+
+section#procedures {
+  div {
+    margin:50px 0;
+    display: grid;
+    grid-gap:30px;
+    grid-template-columns:1fr;
+
+    article {
+      background-color: white;
+      padding: 75px;
+      // margin: 15px;
+      border-radius: 20px;
+      @include boxShadow;
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 50px;
+      }
+    }
+    //end of article
+  }
+  //end of div
+}
+//end of section#procedures
+
+section#testimonials {
+  margin:0;
+  padding:50px 0;
+  background-color: #f6f9f9;
+
+
+  div {
+    margin:50px;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap:30px;
+
+    article {
+
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      @include boxShadow;
+
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        border: 5px solid #d3d3d3;
+      }
+
+      h4 {
+        color: $color-dark;
+        margin: 10px;
+      }
+    }
+    //end of article
+
+
+
+  }
+  //end of div
+  ul li {
+    display: inline-block;
+
+    a {
+      @include icons;
+    }
+  }
+}
+//end of section#testimonials
+
+section#appointment {
+  button {
+    margin: 20px;
+    @include button;
+  }
+}
+
+section#map {
+  width: 80%;
+  margin: 50px auto;
+
+  iframe {
+    @include boxShadow;
+  }
+}
+//style for footer
+
+footer {
+  margin: 50px 0;
+
+  div.nav {
+    margin: 30px;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 10px;
+    text-align:center;
+
+    h5 {
+      color: $color-dark;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px;
+    }
+
+    div.logo {
+      @include logo;
+    }
+
+    div.icons {
+      ul li {
+        display: inline-block;
+      }
+
+      ul li a {
+        @include icons;
+      }
+    }
+  }
+  //end of div.nav
+  hr {
+    width: 100%;
+    border: 1px solid lightgrey;
+  }
+
+  div.copyright {
+    margin-top: 50px;
+    text-align: center;
+  }
+  //end od div.copyright
+}
+
+div.arrow a {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: $color-light;
+  font-size: 40px;
+}
+
+//desktop menu
+@media all and (min-width:1000px) {
+
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 35px;
+
+  }
+
+  h4 {
+    font-size: 25px;
+
+  }
+
+  nav {
+    grid-template-columns: 1fr 2fr;
+    padding:10px;
+    div.logo {
+      border:none;
+    }
+    div.links ul {
+      grid-template-columns:repeat(6,1fr);
+
+    }
+    div.links ul li {
+      padding:0;
+      border:none;
+    }
+
+    div.links ul li a {
+      padding:0;
+    }
+  }
+  header {
+
+     grid-template-columns: 6fr 5fr;
+     div.text {
+       position: relative;
+       margin: 50px;
+
+       div.inner {
+         position: absolute;
+         top: 52%;
+         left: 20px;
+
+
+       }
+     }
+
+
+  }
+
+  section#about {
+
+
+    grid-template-columns: 1fr 1fr;
+
+    div.img img.top {
+      top:50%;
+      left:70%;
+    }
+  }
+
+
+  section#consultation {
+      grid-template-columns: 3fr 1fr;
+  }
+
+   section#procedures {
+     div {
+       grid-template-columns: repeat(3,1fr);
+     }
+   }
+
+   section#testimonials {
+     div {
+
+           grid-template-columns: repeat(7,1fr);
+           article.one {
+             grid-column: 1/4;
+             grid-row: 1/4;
+           }
+
+           article.two {
+             grid-column: 4/8;
+             grid-row: 1/2;
+
+             img {
+               float: left;
+             }
+           }
+
+           article.three {
+             grid-column: 4/8;
+             grid-row: 2/4;
+
+             img {
+               float: left;
+             }
+           }
+         }
+     }
+     footer {
+       div.nav {
+         grid-template-columns: repeat(5,1fr);
+
+       }
+     }
+
+   }

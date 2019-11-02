@@ -1,0 +1,356 @@
+/*# sourceMappingURL=practice.css.map */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: 'open sans' , sans-serif;
+  font-size: 16px; }
+
+section {
+  text-align: center;
+  margin: 50px; }
+
+p {
+  color: #7a7a7a;
+  line-height: 1.5em; }
+
+a {
+  text-decoration: none; }
+
+hr {
+  width: 25%;
+  margin: 20px auto;
+  border: 1px solid #01578c; }
+
+ul {
+  list-style-type: none; }
+
+nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; }
+  nav div.logo {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px #01578c; }
+    nav div.logo span.img {
+      font-size: 30px;
+      color: #01578c;
+      padding-right: 5px; }
+    nav div.logo span.text {
+      font-size: 20px;
+      color: #29d8db;
+      font-weight: bolder; }
+  nav div.links ul {
+    display: grid;
+    grid-template-columns: 1fr; }
+  nav div.links ul li {
+    display: inline-block;
+    padding: 10px;
+    border-bottom: solid 1px #29d8db; }
+  nav div.links a {
+    color: black;
+    padding-left: 30px; }
+    nav div.links a:hover {
+      color: #29d8db; }
+  nav div.links a.phone span {
+    color: #01578c;
+    padding-right: 5px;
+    font-size: 20px; }
+
+div.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px; }
+
+header {
+  background-image: linear-gradient(to right, rgba(1, 87, 140, 0.7) 70%, rgba(41, 216, 219, 0.7) 30%), url("../images/banner.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white; }
+  header div.text {
+    padding: 50px;
+    text-align: center; }
+  header hr {
+    border: solid 1px white; }
+  header h1 {
+    font-size: 25px; }
+  header div.form {
+    color: #01578c;
+    background-color: white;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 20px; }
+    header div.form form input,
+    header div.form textarea {
+      border-radius: 5px;
+      display: block;
+      padding: 15px;
+      margin: 15px 15px 15px 0;
+      width: 100%;
+      background-color: #fafafa;
+      outline: none;
+      border: 1px solid #D3D3D3; }
+    header div.form form button {
+      margin: 12px;
+      background-color: #29d8db;
+      font-size: 18px;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      cursor: pointer; }
+      header div.form form button:hover {
+        background-color: #01578c; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+section#about {
+  margin: 100px 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px; }
+  section#about div.img {
+    position: relative;
+    height: 500px;
+    width: 90%;
+    border-radius: 15px;
+    background-image: url("../images/banner_2.jpg");
+    background-size: cover; }
+    section#about div.img::before {
+      content: "";
+      display: block;
+      border-radius: 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(1, 87, 140, 0.7); }
+    section#about div.img img.top {
+      border-radius: 25px;
+      width: 255px;
+      height: 350px;
+      position: absolute;
+      top: 35%;
+      left: 45%;
+      border: solid 10px white; }
+  section#about div.text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left; }
+    section#about div.text p.strong {
+      font-weight: bolder;
+      font-size: 18px; }
+    section#about div.text a {
+      color: #01578c;
+      border-bottom: 8px double #01578c;
+      padding: 5px; }
+
+section#consultation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  background-color: #01578c;
+  color: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 50px 20px; }
+  section#consultation p {
+    color: white; }
+  section#consultation button {
+    background-color: #29d8db;
+    font-size: 18px;
+    color: white;
+    padding: 15px 24px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer; }
+    section#consultation button:hover {
+      background-color: #01578c; }
+    section#consultation button:hover {
+      background-color: white;
+      color: #01578c; }
+
+section#procedures div {
+  margin: 50px 0;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr; }
+  section#procedures div article {
+    background-color: white;
+    padding: 75px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    section#procedures div article img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 50px; }
+
+section#testimonials {
+  margin: 0;
+  padding: 50px 0;
+  background-color: #f6f9f9; }
+  section#testimonials div {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px; }
+    section#testimonials div article {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+      section#testimonials div article img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        border: 5px solid #d3d3d3; }
+      section#testimonials div article h4 {
+        color: #01578c;
+        margin: 10px; }
+  section#testimonials ul li {
+    display: inline-block; }
+    section#testimonials ul li a {
+      color: #29d8db;
+      font-size: 40px;
+      padding: 8px; }
+
+section#appointment button {
+  margin: 20px;
+  background-color: #29d8db;
+  font-size: 18px;
+  color: white;
+  padding: 15px 24px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer; }
+  section#appointment button:hover {
+    background-color: #01578c; }
+
+section#map {
+  width: 80%;
+  margin: 50px auto; }
+  section#map iframe {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+footer {
+  margin: 50px 0; }
+  footer div.nav {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    text-align: center; }
+    footer div.nav h5 {
+      color: #01578c;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px; }
+    footer div.nav div.logo span.img {
+      font-size: 30px;
+      color: #01578c;
+      padding-right: 5px; }
+    footer div.nav div.logo span.text {
+      font-size: 20px;
+      color: #29d8db;
+      font-weight: bolder; }
+    footer div.nav div.icons ul li {
+      display: inline-block; }
+    footer div.nav div.icons ul li a {
+      color: #29d8db;
+      font-size: 40px;
+      padding: 8px; }
+  footer hr {
+    width: 100%;
+    border: 1px solid lightgrey; }
+  footer div.copyright {
+    margin-top: 50px;
+    text-align: center; }
+
+div.arrow a {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: #29d8db;
+  font-size: 40px; }
+
+@media all and (min-width: 1000px) {
+  h1 {
+    font-size: 60px; }
+
+  h2 {
+    font-size: 35px; }
+
+  h4 {
+    font-size: 25px; }
+
+  nav {
+    grid-template-columns: 1fr 2fr;
+    padding: 10px; }
+    nav div.logo {
+      border: none; }
+    nav div.links ul {
+      grid-template-columns: repeat(6, 1fr); }
+    nav div.links ul li {
+      padding: 0;
+      border: none; }
+    nav div.links ul li a {
+      padding: 0; }
+
+  header {
+    grid-template-columns: 6fr 5fr; }
+    header div.text {
+      position: relative;
+      margin: 50px; }
+      header div.text div.inner {
+        position: absolute;
+        top: 52%;
+        left: 20px; }
+
+  section#about {
+    grid-template-columns: 1fr 1fr; }
+    section#about div.img img.top {
+      top: 50%;
+      left: 70%; }
+
+  section#consultation {
+    grid-template-columns: 3fr 1fr; }
+
+  section#procedures div {
+    grid-template-columns: repeat(3, 1fr); }
+
+  section#testimonials div {
+    grid-template-columns: repeat(7, 1fr); }
+    section#testimonials div article.one {
+      grid-column: 1/4;
+      grid-row: 1/4; }
+    section#testimonials div article.two {
+      grid-column: 4/8;
+      grid-row: 1/2; }
+      section#testimonials div article.two img {
+        float: left; }
+    section#testimonials div article.three {
+      grid-column: 4/8;
+      grid-row: 2/4; }
+      section#testimonials div article.three img {
+        float: left; }
+
+  footer div.nav {
+    grid-template-columns: repeat(5, 1fr); } }
+
+/*# sourceMappingURL=style.css.map */
